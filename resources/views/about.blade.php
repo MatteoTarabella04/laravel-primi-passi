@@ -14,6 +14,10 @@
         body {
             font-family: 'Nunito', sans-serif;
         }
+
+        b {
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -30,9 +34,9 @@
         </h1>
 
         <ul>
-            @foreach ($about_me as $me)
+            @foreach ($about_me as $key => $value)
                 <li>
-                    {{ $me }}
+                    <b>{{ $key }}:</b> {{ $value }}
                 </li>
             @endforeach
         </ul>
